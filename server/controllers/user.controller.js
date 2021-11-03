@@ -1,5 +1,11 @@
+const { response } = require("express");
 const User = require("../models/user.model");
 
+module.exports.index = (req, res) => {
+  res.json({
+    message: "Hello World"
+  })
+}
 module.exports.findAllUsers = (req, res) => {
   User.find()
     .then(allDaUsers => res.json({ users: allDaUsers }))

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dbNAME = //Name Your DB Here
+const dbNAME = "productManager_Schema"
 
 mongoose.connect("mongodb://localhost/"+dbNAME, {
 	useNewUrlParser: true,
