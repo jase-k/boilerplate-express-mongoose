@@ -3,7 +3,12 @@
 Navigate to server/config/mongoose.config.js <br>
 Insert your database name in the ```dbNAME``` variable on line 2 <br><br>
 
-run ```nodemon ./server.js``` in your terminal
+In seperate terminals run: <br> 
+```
+cd boilerplate-express-mongoose
+npm install
+nodemon ./server.js
+``` 
 
 ```
 cd client
