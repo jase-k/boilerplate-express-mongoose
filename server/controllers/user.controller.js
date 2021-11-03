@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 
 module.exports.index = (req, res) => {
   res.json({
-    message: "Hello World"
+    message: "You are Connected to the DB"
   })
 }
 module.exports.findAllUsers = (req, res) => {
