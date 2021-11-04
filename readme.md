@@ -15,3 +15,8 @@ cd client
 npm install
 npm start
 ```
+### Store API KEYS IN .env file: 
+```
+FIRST_SECRET_KEY="first key value"
+SECOND_SECRET_KEY="second key value"
+```
