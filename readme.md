@@ -20,3 +20,8 @@ npm start
 FIRST_SECRET_KEY="first key value"
 SECOND_SECRET_KEY="second key value"
 ```
+
+Invoke Keys with:
+```
+const myFirstSecret = process.env.FIRST_SECRET_KEY;
+```
