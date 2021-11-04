@@ -22,10 +22,12 @@ const UserSchema = new mongoose.Schema({
 	}
 }, {timestamps: true});
 
-UserSchema.virtual('confirmPassword')
+//PreHook creates a virtual attribute for model but will not save to the db
+UserSchema.virtual('confirmPassword') //name of virtual attribute
 	.get(() => this._confirmPassword)
 	.set(value => this._confirmPassword = value)
 
+//PreHook checks for validations prior to all other validations defined in the model
 UserSchema.pre('validate', function(next){
 	if(this.password !== this.confirmPassword){
 		this.invalidate('confirmPassword', 'Password must match confirm password');
@@ -33,6 +35,7 @@ UserSchema.pre('validate', function(next){
 	next()
 })
 
+//PreHook prior to saving data to db. 
 UserSchema.pre('save', function(next){
 	bcrypt.hash(this.password, 14)
 	.then(hash => {
