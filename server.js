@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require('cors')
+require('dotenv').config();
 
 // This will fire our mongoose.connect statement to initialize our database connection
 require("./server/config/mongoose.config");
