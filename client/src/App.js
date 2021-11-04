@@ -9,11 +9,13 @@ import {
 } from "react-router-dom"
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <div className="App">
       <Routes>
-        <Route exact path="/" element={< Index />} />
+          <Route exact path="/" element={< Index />} />
       </Routes>
       </div>
     </BrowserRouter>
