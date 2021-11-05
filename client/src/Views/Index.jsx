@@ -21,8 +21,7 @@ const Index = () => {
             })
             .catch(err => {
                 console.log(err.response)
-                let {data} = err.response
-                if(data.verified === false){
+                if(err.response && err.response.data.verified === false){
                     setMessage("Shucks! You unAuthorized to the DB")
                     setColor("orange")
                 }

@@ -10,5 +10,3 @@ module.exports.authenticate = (req, res, next) => {
   });
 }
 
-module.exports.secret = secret
-
